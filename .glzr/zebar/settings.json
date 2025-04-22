@@ -1,0 +1,9 @@
+{
+    "$schema": "TODO",
+    "startupConfigs": [
+        {
+            "path": "dark\\dark.zebar.json",
+            "preset": "dark"
+        }
+    ]
+}
