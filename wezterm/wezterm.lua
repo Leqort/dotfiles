@@ -91,6 +91,35 @@ config.keys = {
 		key = "UpArrow",
 		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
 	},
+	{
+		key = "c",
+		mods = "CTRL",
+		action = wezterm.action_callback(function(window, pane)
+			local sel = window:get_selection_text_for_pane(pane)
+			if not sel or sel == "" then
+				window:perform_action(wezterm.action.SendKey({ key = "c", mods = "CTRL" }), pane)
+			else
+				window:perform_action(wezterm.action({ CopyTo = "Clipboard" }), pane)
+			end
+		end),
+	},
+	{ key = "v", mods = "CTRL", action = wezterm.action.PasteFrom("Clipboard") },
+	{
+		key = "v",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action_callback(function(window, pane)
+			window:perform_action(wezterm.action.SendKey({ key = "v", mods = "CTRL" }), pane)
+		end),
+	},
+	{
+		key = "V",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action_callback(function(window, pane)
+			window:perform_action(wezterm.action.SendKey({ key = "v", mods = "CTRL" }), pane)
+		end),
+	},
+	{ key = "c", mods = "ALT", action = wezterm.action.CopyTo("Clipboard") },
+	{ key = "v", mods = "ALT", action = wezterm.action.PasteFrom("Clipboard") },
 }
 
 -- tab bar
