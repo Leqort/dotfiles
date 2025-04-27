@@ -1,6 +1,6 @@
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 Import-Module posh-git
-oh-my-posh init pwsh --config 'C:\Users\leqort\AppData\Local\Programs\oh-my-posh\themes\zash.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config 'C:\Users\leqort\.config\powershell\leqort.omp.json' | Invoke-Expression
 
 # PSReadLine
 Set-PSReadLineOption -EditMode Emacs
