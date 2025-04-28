@@ -43,16 +43,6 @@ config.keys = {
 	},
 	{
 		mods = "LEADER",
-		key = "=",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		mods = "LEADER",
-		key = "-",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		mods = "LEADER",
 		key = "h",
 		action = wezterm.action.ActivatePaneDirection("Left"),
 	},
@@ -129,7 +119,7 @@ config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 
-config.default_prog = { "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.5.0.0_x64__8wekyb3d8bbwe\\pwsh.exe" }
+config.default_prog = { "pwsh.exe", "-NoLogo" }
 -- config.window_background_opacity = 0.8
 
 -- and finally, return the configuration to wezterm
