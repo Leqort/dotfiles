@@ -1,4 +1,3 @@
-
 <h1 align="center">Dotfiles</h1>
 <div align="center">
 <h3>What am I using?</h3>
@@ -18,3 +17,12 @@
 ![preview_image](https://github.com/Leqort/dotfiles/blob/main/assets/preview.png?raw=true)
 ![preview_image](https://github.com/Leqort/dotfiles/blob/main/assets/preview1.png?raw=true)
 
+## How to install
+```
+git clone https://github.com/Leqort/dotfiles.git
+mv wezterm ~/.config/wezterm
+mv .glzr ~/.glzr
+mv fastfetch ~/.config/fastfetch
+mv powershell ~/.config/powershell
+mv nvim ~/Appdata/Local/nvim
+```
