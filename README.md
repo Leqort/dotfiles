@@ -20,6 +20,7 @@
 ## How to install
 ```
 git clone https://github.com/Leqort/dotfiles.git
+cd dotfiles
 mv wezterm ~/.config/wezterm
 mv .glzr ~/.glzr
 mv fastfetch ~/.config/fastfetch
